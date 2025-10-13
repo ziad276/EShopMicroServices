@@ -1,20 +1,20 @@
-﻿
-namespace Basket.API.Basket.DeleteBasket
+﻿using Basket.API.Basket.DeleteBasket;
+
+namespace Basket.API.Basket.DeleteBaskete
 {
-    //public record DeleteBasketRequest(string UserName);
-    public record DeleteBasketResponse(bool Success);
+    public record DeleteBasketResponse(bool IsSuccess);
+
     public class DeleteBasketEndpoints : ICarterModule
     {
         public void AddRoutes(IEndpointRouteBuilder app)
         {
-            app.MapDelete("/basket/{userName}", async(string userName, ISender sender) =>
+            app.MapDelete("/basket/{userName}", async (string userName, ISender sender) =>
             {
                 var result = await sender.Send(new DeleteBasketCommand(userName));
 
-                var respone = result.Adapt<DeleteBasketResponse>();
+                var response = result.Adapt<DeleteBasketResponse>();
 
-                return Results.Ok(respone);
-                
+                return Results.Ok(response);
             })
             .WithName("DeleteProduct")
             .Produces<DeleteBasketResponse>(StatusCodes.Status200OK)
