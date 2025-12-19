@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Carter;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Ordering.API
 {
@@ -7,7 +8,7 @@ namespace Ordering.API
         public static IServiceCollection AddApiServices(this IServiceCollection services)
         {
 
-            // services.AddCarter();
+            services.AddCarter();
             return services;
         }
 
@@ -15,7 +16,7 @@ namespace Ordering.API
         {
 
 
-            // app.UseCarter();
+            app.MapCarter();
             return app;
         }
     }
