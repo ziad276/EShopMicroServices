@@ -10,7 +10,7 @@
                 .FindAsync([orderId], cancellationToken: cancellationToken);
 
 
-            if (order == null)
+            if (order is null)
             {
                 throw new OrderNotFoundException(command.OrderId);
             }
