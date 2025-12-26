@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace BuildingBlocks.Messaging.Mass_Transit
+namespace BuildingBlocks.Messaging.MassTransit
 {
     
         public static class Extentions
