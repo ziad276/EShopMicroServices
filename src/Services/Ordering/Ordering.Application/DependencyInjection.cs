@@ -18,7 +18,7 @@ namespace Ordering.Application
                 config.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
 
-            services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly();
+            services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
 
             return services;
 
