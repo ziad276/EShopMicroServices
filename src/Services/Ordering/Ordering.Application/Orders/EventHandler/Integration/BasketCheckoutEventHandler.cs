@@ -5,7 +5,7 @@ using Ordering.Application.Orders.Commands.CreateOrder;
 namespace Ordering.Application.Orders.EventHandler.Integration
 {
     public class BasketCheckoutEventHandler
-        (ILogger logger, ISender sender)
+        (ILogger<BasketCheckoutEventHandler> logger, ISender sender)
         :IConsumer<BasketCheckoutEvent>
     {
         public async Task Consume(ConsumeContext<BasketCheckoutEvent> context)

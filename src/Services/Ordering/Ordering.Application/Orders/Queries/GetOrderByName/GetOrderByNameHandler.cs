@@ -14,7 +14,8 @@ namespace Ordering.Application.Orders.Queries.GetOrderByName
                 .Include(o => o.OrderItems)
                 .AsNoTracking() // Use AsNoTracking() when this query is only for **read-only purposes**
                 .Where(o => o.OrderName.Value.Contains(query.Name))
-                .OrderBy(o => o.OrderName)
+                .OrderBy(o => o.OrderName.Value)
+
                 .ToListAsync(cancellationToken);
 
            
