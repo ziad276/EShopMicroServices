@@ -16,6 +16,6 @@ namespace Shopping.Web.Models.Catalog
 
 // wrapper classes
 
-public record GetProductsRespone(IEnumerable<ProductModel> Products);
-public record GetProductByCategoryRespone(IEnumerable<ProductModel> Products);
-public record GetProductByIdRespone(ProductModel Product);
+public record GetProductsResponse(IEnumerable<ProductModel> Products);
+public record GetProductByCategoryResponse(IEnumerable<ProductModel> Products);
+public record GetProductByIdResponse(ProductModel Product);
